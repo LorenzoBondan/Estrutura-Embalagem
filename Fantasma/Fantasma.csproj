@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96116402-1B26-48CA-8178-B97E21672ED1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Fantasma</RootNamespace>
+    <AssemblyName>Fantasma</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ghost.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Componentes\Cantoneiras\Cantoneira.cs" />
+    <Compile Include="Componentes\Cantoneiras\frmBancoCantoneiras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes\Cantoneiras\frmBancoCantoneiras.Designer.cs">
+      <DependentUpon>frmBancoCantoneiras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\Componente.cs" />
+    <Compile Include="Componentes\Plasticos\frmBancoPlasticos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes\Plasticos\frmBancoPlasticos.Designer.cs">
+      <DependentUpon>frmBancoPlasticos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\Plasticos\Plastico.cs" />
+    <Compile Include="Componentes\Polietileno\frmBancoPolietileno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes\Polietileno\frmBancoPolietileno.Designer.cs">
+      <DependentUpon>frmBancoPolietileno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\Polietileno\Polietileno.cs" />
+    <Compile Include="Componentes\TNT\frmBancoTNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes\TNT\frmBancoTNT.Designer.cs">
+      <DependentUpon>frmBancoTNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\TNT\TNT.cs" />
+    <Compile Include="Controles\Elipse.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Separator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Códigos Concatenados\CodigoConcatenado.cs" />
+    <Compile Include="Exportador.cs" />
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instruções\frmExemploImportacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instruções\frmExemploImportacao.Designer.cs">
+      <DependentUpon>frmExemploImportacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instruções\frmInstrucoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instruções\frmInstrucoes.Designer.cs">
+      <DependentUpon>frmInstrucoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Componentes\Cantoneiras\frmBancoCantoneiras.resx">
+      <DependentUpon>frmBancoCantoneiras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\Plasticos\frmBancoPlasticos.resx">
+      <DependentUpon>frmBancoPlasticos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\Polietileno\frmBancoPolietileno.resx">
+      <DependentUpon>frmBancoPolietileno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\TNT\frmBancoTNT.resx">
+      <DependentUpon>frmBancoTNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instruções\frmExemploImportacao.resx">
+      <DependentUpon>frmExemploImportacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instruções\frmInstrucoes.resx">
+      <DependentUpon>frmInstrucoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ghost.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
